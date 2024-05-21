@@ -5,8 +5,8 @@
 </head>
 <body>
     <h1>Lista de Produtos e seus Custos</h1>
-
     @foreach ($products as $product)
+    <div>
         <h2>{{ $product->name }}</h2>
         <p>{{ $product->description }}</p>
         <h3>Custos:</h3>
@@ -15,6 +15,8 @@
                 <li>Valor: {{ $cost->cost_value }} - Data: {{ $cost->date }}</li>
             @endforeach
         </ul>
-    @endforeach
+    </div>
+@endforeach
+
 </body>
 </html>
